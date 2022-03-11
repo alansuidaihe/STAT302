@@ -1,0 +1,18 @@
+---
+title: "Additonal Document (Memo)"
+subtitle: "Data Visualization (STAT 302)"
+author: "Daihe Sui"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: "tango"
+---
+
+> What is the core concept(s) or insight(s) into the data that you believe the visualization communicates? If you choose to include animation then explain why animation helps. If you build an app then explain your choice of widgets and what about the data it help users understand.
+
+I built an app for STAT 202 Project 1, which is about different sampling methods. For the information about the datasets I use, please see **Sui_Daihe_DataMemo.html**.
+
+Basically I followed the provided instructions. On the left side of the dashboard, I described the datasets used for sampling. Also, I threw out some questions for students to consider. On the right, we have the inputs and outputs. For selecting a certain dataset, a sampling method, or a variable to group by, I used `selectInput()`. For specifying numbers (like sample size or sampling interval), I used `sliderInput()` or `numericInput()`. I also added an `activeButton()` when people don't want to change any choices but only want to get a new sample. It is natural to make such choices for the inputs. One thing worth mentioning is that, this app has a **dynamic** UI. For instance, you can't see the select box "Choose a variable" when you choose simple sampling. But when you switch to cluster sampling or stratified sampling, this select box will appear.
+
+We have three outputs, two are `tableOutput()` and one is `plotOutput()`. The two tables contain information for the sample and population respectively: size, mean and standard deviation. By doing so, we can easily compare the true parameters and the estimates. The plot is a histogram which shows the sampled data in the population. This enables us to have a better view of the relationship between the sample and the population, as the sample size changes.

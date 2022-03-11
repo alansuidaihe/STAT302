@@ -1,0 +1,13 @@
+name: final_project
+title: final_project
+username:
+account: alansuidaihe
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5830187
+bundleId: 5669723
+url: https://alansuidaihe.shinyapps.io/final_project/
+when: 1646977175.81691
+lastSyncTime: 1646977175.81692
+asMultiple: FALSE
+asStatic: FALSE

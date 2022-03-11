@@ -1,0 +1,48 @@
+---
+title: "Final Projcet Data Memo"
+subtitle: "Data Visualization (STAT 302)"
+author: "Daihe Sui"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: "tango"
+---
+
+I would like to do the Shiny dashboard contribution for STAT 202. I am taking on Project 1, which is basically about applying different **sampling** methods. Therefore, I should find the dataset which records the data for a whole population (or we may call it a **census**), rather than a dataset which itself is only a sample from the bigger population.
+
+## I. Coursera Courses Dataset 2021
+
+### Data Source
+
+This dataset is an open-source dataset from Kaggle. It can be downloaded at https://www.kaggle.com/khusheekapoor/coursera-courses-dataset-2021.
+
+### How to Sample from this Data
+
+2021 has seen a boom in the MOOCs due to the COVID-19 Pandemic. This dataset contains the rating information for all available courses on the Coursera website in 2021. We want to estimate the mean and standard deviation of the rating of all courses on Coursera in 2021 (our **parameters** here).
+
+Of course we can do **simple random sampling** for this dataset. Since this dataset also contains information about the difficulty level of the courses, we can hence do **stratified sampling**. We can also do **cluster sampling** according to this variable, though it is not very appropriate here. At last, we can properly do **systematic sampling** in this dataset, since in this dataset the data are not organised within a certain pattern.
+
+After obtaining the sample, we will then calculate the sample mean and standard deviation. We will also give a histogram to present the distribution of the sample data.
+
+### Potential Data Issues
+
+There is some potential problems with cluster sampling here. Since we have only three clusters here (with difficulty level beginner, intermediate or advance), we are basically choosing one cluster from these three clusters. (We may not want to choose two clusters, since it may already exceed half of the population!) Therefore, there may be serious bias with the sample obtained from cluster sampling.
+
+## II. ATP Matched Data 2011-2020
+
+### Data Source
+
+This dataset can be downloaded from https://github.com/JeffSackmann/tennis_atp.
+
+### How to Sample from this Data
+
+This dataset contains every ATP (The Association of Tennis Professionals) Men's Singles match from 2011 to 2020. I choose this dataset because I am a huge tennis fan! Although this dataset contains a lot of detailed information of each match, we are here only focusing on match length. We also exclude all Grand Slam matches since they are best of five, while all the rest of the matches are best of three.
+
+This dataset is extremely appropriate for stratified sampling! There are three main types of courts in tennis, hard court, clay court and grass court. In a match on clay court there may be more baseline rallies, while in grass court almost everyone is doing serve-and-volley (which means fewer rallies in a point). Hence, the match length on different surfaces may vary a lot. We can, therefore, use stratified sampling to tackle this issue.
+
+We can also do cluster sampling according to year. Since we have 10 years in total, we can randomly pick maybe two or three years. Note that almost every tennis tournament is held on a yearly basis, so the data from a single year can be good representation of the population! Therefore, this is really a good dataset to do both stratified sampling and cluster sampling!
+
+### Potential Data Issues
+
+However, it may be not that appropriate to do systematic sampling in this dataset: the matches are recorded in a chronological order. We may reshuffle the data, though, before doing systematic sampling.
